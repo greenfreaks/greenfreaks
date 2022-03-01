@@ -154,6 +154,7 @@ nav{
     position: sticky;
     top: 0;
     background-color: var(--darkBlue);
+    z-index: 1;
 }
 nav ul, .head__nav--cell{
     list-style: none;
@@ -269,6 +270,10 @@ footer ul li a{
     width: 40%;
     padding-top: 100px;
     padding-left: 50px;
+}
+.head__banner--content:hover{
+    transform: translateX(100px);
+    transition: all 2s;
 }
 .head__banner--content a{
     float: right;
@@ -410,13 +415,16 @@ article{
     padding-top: 100px;
     padding-left: 50px;
 }
+.bannerProductos--content:hover{
+    transform: translateX(100px);
+    transition: all 2s;
+}
 .bannerProductos--content a{
     float: right;
 }
 
 .productosUno{
-    max-width: 100%;
-    overflow: scroll;
+    position: relative;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
@@ -424,6 +432,7 @@ article{
     grid-template-areas:
     "productosUno__fts      productosUno__snd       productosUno__thr";
 }
+
 
 .productosUno__fts{
     grid-area: productosUno__fts;
@@ -437,7 +446,25 @@ article{
 .productosUno img{
     width: 100%;
 }
+.productosUno a{
+    display: none;
+}
+.productosUno__fts:hover,
+.productosUno__snd:hover,
+.productosUno__thr:hover{
+    transform: translateY(-50px);
+    transition: all 0.5s;
+    color: var(--white);
+    background-color: var(--darkBlue);
+    padding: 30px 30px 10px 30px;
+    border-radius: 5px;
+}
 
+.productosUno__fts:hover a,
+.productosUno__snd:hover a,
+.productosUno__thr:hover a{
+    display: inline-block;
+}
 
 
 @media screen and (max-width: 768px){
@@ -494,6 +521,9 @@ article{
     }
     .productosUno{
         max-width: 768px;
+    }
+    .productosUno a{
+        display: block;
     }
 
 
