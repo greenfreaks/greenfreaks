@@ -151,26 +151,35 @@ body{
 /*------Nav-------*/
 nav{
     padding: 25px 5px;
+    position: sticky;
+    top: 0;
+    background-color: var(--darkBlue);
 }
-nav ul, nav .head__nav--cell{
+nav ul, .head__nav--cell{
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
+
+.head__navCell{
+    display: none;
+}
+
 nav ul li a{
     text-decoration: none;
-    color: var(--darkBlue);
+    color: var(--white);
+}
+nav ul li a:hover{
+    color: var(--green);
 }
 nav ul .active{
- background-color: var(--darkBlue);
- color: var(--white);
- padding: 25px;
+    padding: 10px 30px;
+    border-top: 5px solid #6BDE3D;
+    /* border-bottom: 5px solid #6BDE3D; */
 }
-nav .head__nav--logo{
-    position: static;
-}
+
 nav ul li ul{
     display: flex;
     flex-direction: column;
@@ -182,9 +191,6 @@ nav ul li:hover ul{
     display: block;
 }
 
-.head__navCell{
-    display: none;
-}
 
 footer{
     font-size: 1.5rem;
