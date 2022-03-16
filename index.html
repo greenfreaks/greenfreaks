@@ -17,49 +17,31 @@
 
     <head>
         <nav class="head__nav">
-            <ul>
-                <li class="head__nav--logo">Logo</li>
-                <li><a href="#" class="active">Inicio</a></li>
-                <li class="head__nav--servicios">
-                    <a href="sections/servicios.html">Servicios</a>
-                    <ul>
-                        <li>Desarrollo Web</li>
-                        <li>Desarrollo de Software</li>
-                        <li>Desarrollo de aplicaciones</li>
-                        <li>Creación y edición de contenido multimedia</li>
-                        <li>Diseño gráfico</li>
-                    </ul>
+            <div class=" head__nav--logo">
+                <h4><a href="" class="noDecoration greenTx boldTx">GREEN FREAKS</a></h4>
+            </div>
+            <ul class="head__nav--content noList">
+                <li><a href="#" class="noDecoration active whiteTx boldTx">Inicio</a></li>
+                <li><a href="sections/servicios.html" class="noDecoration whiteTx boldTx">Servicios</a></li>
+                <li><a href="sections/productos.html" class="noDecoration whiteTx boldTx">Productos</a></li>
+                <li><a href="#" class="noDecoration whiteTx boldTx">Contacto</a></li>
+                <li>
+                    <form action="">
+                        <input type="search">
+                        <input type="submit" class="black whiteTx" placeholder="Buscar..." value="Buscar">
+                    </form>
                 </li>
-                <li><a href="sections/productos.html">Productos</a></li>
-                <li class="head__nav--contacto">
-                    <a href="">Contacto</a>
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-messenger"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                    </ul>
-                </li>
-                <li><a href=""><i class="fas fa-search"></i></a></li>
-                <ul>
-                    <li class="darkBlue whiteTx"><a href="">Es  </a> / <a href="">   En</a></li>
+                <ul class="noList">
+                    <li><a href="" class="noDecoration whiteTx">EN</a>  <b class="whiteTx">/</b>   
+                        <a href="" class="noDecoration whiteTx">ES</a></li>
                 </ul>
             </ul>
-        </nav>
-
-        <div class= "head__navCell boxShadow darkBlue whiteTx">
-            <ul>
-                <li><a><i class="fas fa-bars"></i></a></li>
-            </ul>
-        </div>
-        <div class="head__preferences">
-            <div class="head__preferences--visualMode">
-                <p>Dark Mode</p>
-                <i class="fas fa-toggle-on"></i>
+            <div class="head__nav--burger">
+                <div class="head__nav--burger-1"></div>
+                <div class="head__nav--burger-2"></div>
+                <div class="head__nav--burger-3"></div>
             </div>
-        </div>
+        </nav>
         <div class="head__banner">
             <div class="head__banner--content">
                 <h1>How i turned my app idea into a real business?</h1>
@@ -189,6 +171,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/nav.js"></script>
 </body>
 
 </html>

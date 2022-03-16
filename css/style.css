@@ -72,6 +72,9 @@ body{
 .boldTx{
     font-weight: bold;
 }
+.semiBoldTx{
+    font-weight: 400;
+}
 .lightTx{
     font-weight: lighter;
 }
@@ -142,6 +145,9 @@ body{
 .noList{
     list-style: none;
 }
+.noDecoration{
+    text-decoration: none;
+}
 
 
 /*---END FRAMEWOR---*/
@@ -150,46 +156,56 @@ body{
 
 /*------Nav-------*/
 nav{
-    padding: 25px 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--darkBlue);
     position: sticky;
     top: 0;
-    background-color: var(--darkBlue);
-    z-index: 1;
+    z-index: 2;
+    padding: 8px;
 }
-nav ul, .head__nav--cell{
-    list-style: none;
+/*--- Burger Nav---*/
+.head__nav--burger div{
+    width: 20px;
+    height: 2px;
+    background-color: var(--white);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.head__nav--logo{
+    letter-spacing: 5px;
+}
+.head__nav--content{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 60%;
+}
+.head__nav--content a{
+    letter-spacing: 1px;
+    /* font-weight: bold; */
+}
+.head__nav--content a:hover{
+    transform: translateY(-50px);
+    transition: all 0.5s;
+    background-color: var(--black);
+    padding: 15px;
+}
+
+.head__nav--content .active{
+    border-bottom: #6BDE3D 5px solid;
+    padding: 5px;
+}
+.head__nav--content ul{
+    display: flex;
     justify-content: space-around;
 }
 
-.head__navCell{
+/*---Responsive NAV --*/
+.head__nav--burger{
     display: none;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: var(--white);
-}
-nav ul li a:hover{
-    color: var(--green);
-}
-nav ul .active{
-    padding: 10px 30px;
-    border-top: 5px solid #6BDE3D;
-    /* border-bottom: 5px solid #6BDE3D; */
-}
-
-nav ul li ul{
-    display: flex;
-    flex-direction: column;
-}
-nav ul li ul{
-    display:none
-}
-nav ul li:hover ul{
-    display: block;
+    font-size: 1.2em;
 }
 
 
@@ -471,11 +487,57 @@ article{
 /*------ General Settings - Tablet-------*/
     body{
         font-size: 0.9em;
+        /* overflow-x: hidden; */
     }
     footer{
         font-size: 1rem;
         padding: 50px;
     }
+    /*------ NAVBAR -------*/
+    .head__nav--content{
+        position: absolute;
+        right: 0;
+    }
+    .head__nav--content{
+        height: 92vh;
+        top: 8vh;
+        flex-direction: column;
+        background-color: #1A3544;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .head__nav--content li{
+        opacity: 0;
+    }
+    .head__nav--burger{
+        display: block;
+        cursor: pointer;
+    }
+    .head__nav--contentActive{
+        transform: translate(0%);
+    }
+    @keyframes head__nav--contentFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    .toggle .head__nav--burger-1{
+        transform: rotate(-45deg) translate(-3px,5px);
+    }
+    .toggle .head__nav--burger-2{
+      opacity: 0;  
+    }
+    .toggle .head__nav--burger-3{
+      transform: rotate(45deg) translate(-5px,-7px);
+    }
+ 
 
     /*------ Home - Tablet-------*/
     .head__banner--content{
