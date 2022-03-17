@@ -1,0 +1,211 @@
+/*-------------------------------------Home -desktop -------------------------------*/
+/* ---------- Header Banner -------- */
+.head__banner {
+    background-image: url("../img/home/header.jpg");
+    width: 100%;
+    height: 400px;
+
+    .head__banner--content {
+        color: $white;
+        width: 40%;
+        padding-top: 100px;
+        padding-left: 50px;
+
+        &:hover {
+            transform: translateX(100px);
+            transition: all 2s;
+        }
+
+        a {
+            float: right;
+        }
+    }
+}
+
+/* ---------- Qué es  -------- */
+
+article {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "article__img       article__content";
+
+    .article__img {
+        grid-area: article__img;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .article__content {
+        grid-area: article__content;
+        padding-top: 30px;
+    }
+}
+
+
+/* ---------- Servicios -------- */
+.servicios {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "servicios__web       servicios__multimedia        servicios__accesorios";
+
+    .servicios__web {
+        grid-area: servicios__web;
+    }
+
+    .servicios__multimedia {
+        grid-area: servicios__multimedia;
+    }
+
+    .servicios__accesorios {
+        grid-area: servicios__accesorios;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+
+
+/*--------Testimonios---------*/
+.testimonios {
+    padding: 20px 200px 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "testimonios__img      testimonios__content"
+        "testimonios__nav      testimonios__nav";
+
+    .testimonios__img {
+        grid-area: testimonios__img;
+
+        .testimonios__img--pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 150px;
+        }
+
+        .testimonios__img--flag {
+            display: none;
+        }
+    }
+
+    .testimonios__content {
+        padding-top: 50px;
+        grid-area: testimonios__content;
+    }
+
+    .testimonios__nav {
+        grid-area: testimonios__nav;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 5em;
+        }
+    }
+}
+
+/*------ Home - Tablet-------*/
+@media screen and (max-width: 768px) {
+
+    .head__banner--content {
+        width: 60%;
+
+        a {
+            float: left;
+        }
+    }
+
+    .article__content {
+        grid-area: article__content;
+        padding-top: 0;
+    }
+
+    .testimonios {
+        padding: 20px;
+
+        .testimonios__img {
+            img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+/*------Home - Long Cell ----------*/
+@media screen and (max-width: 480px) {
+    .head__banner--content {
+        width: 80%;
+
+        a {
+            float: left;
+        }
+    }
+
+    article {
+        grid-template-columns: 1fr;
+        grid-template-areas: "article__content"
+            "article__img";
+    }
+
+    .servicios {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "servicios__web        servicios__multimedia"
+            "servicios__accesorios servicios__accesorios";
+    }
+
+    .testimonios {
+        grid-template-columns: 1fr;
+        grid-template-areas: "testimonios__img"
+            "testimonios__content"
+            "testimonios__nav";
+
+        .testimonios__img {
+            img {
+                margin-left: 90px;
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+/*------ Home - Tall Cell-------*/
+@media screen and (max-width: 320px) {
+
+
+    .head__banner--content {
+        h1 {
+            font-size: 1rem;
+        }
+    }
+
+    article {
+        grid-template-areas: "article__img"
+            "article__content";
+    }
+
+    .servicios {
+        grid-template-columns: 1fr;
+        grid-template-areas: "servicios__web"
+            "servicios__multimedia"
+            "servicios__accesorios";
+    }
+
+    .testimonios__img {
+        img {
+            margin-left: 30px;
+        }
+    }
+}

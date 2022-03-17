@@ -1,0 +1,130 @@
+/*------------------------------------------ Productos -Desktop -------------------------------------*/
+.bannerProductos {
+    background-image: url("../img/productos/ciervo.jpg");
+    width: 100%;
+    height: 400px;
+
+    .bannerProductos--content {
+        color: $white;
+        width: 40%;
+        padding-top: 100px;
+        padding-left: 50px;
+
+        &:hover {
+            transform: translateX(100px);
+            transition: all 2s;
+        }
+
+        a {
+            float: right;
+        }
+    }
+}
+
+.productosUno {
+    position: relative;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto 1fr);
+    grid-template-areas:
+        "productosUno__fts      productosUno__snd       productosUno__thr";
+
+    .productosUno__fts {
+        grid-area: productosUno__fts;
+
+        &:hover {
+            transform: translateY(-50px);
+            transition: all 0.5s;
+            color: $white;
+            background-color: $darkBlue;
+            padding: 30px 30px 10px 30px;
+            border-radius: 5px;
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
+    .productosUno__snd {
+        grid-area: productosUno__snd;
+
+        &:hover {
+            transform: translateY(-50px);
+            transition: all 0.5s;
+            color: $white;
+            background-color: $darkBlue;
+            padding: 30px 30px 10px 30px;
+            border-radius: 5px;
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
+    .productosUno__thr {
+        grid-area: productosUno__thr;
+
+        &:hover {
+            transform: translateY(-50px);
+            transition: all 0.5s;
+            color: $white;
+            background-color: $darkBlue;
+            padding: 30px 30px 10px 30px;
+            border-radius: 5px;
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        display: none;
+    }
+}
+
+/*------Productos - Tablet ----------*/
+@media screen and (max-width: 768px) {
+
+    .bannerProductos--content {
+        width: 60%;
+
+        a {
+            float: left;
+        }
+
+    }
+
+    .productosUno {
+        max-width: 768px;
+
+        a {
+            display: block;
+        }
+    }
+
+
+}
+
+/*End Media Screen 768px*/
+
+/*------Productos - Long Cell ----------*/
+@media screen and (max-width: 480px) {
+
+    .bannerProductos--content {
+        width: 80%;
+        a {
+            float: left;
+        }
+    }
+
+}
+
+/*End Media Screen 480px*/

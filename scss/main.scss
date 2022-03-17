@@ -1,0 +1,21 @@
+/*Base*/
+@import "base/typography";
+@import "base/reset";
+
+/*Utilities*/
+@import "utilities/variables";
+
+/*Components*/
+@import "components/backgrounds";
+@import "components/texts";
+@import "components/buttons";
+@import "components/specialFeatures";
+
+/*Layout*/
+@import "layout/navbar";
+@import "layout/footer";
+
+/*Views*/
+@import "views/home";
+@import "views/servicios";
+@import "views/productos";
