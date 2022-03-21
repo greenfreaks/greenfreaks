@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Base*/
+/*Utilities*/
 /*Base*/
 /*Montserrat */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap");
@@ -11,7 +12,7 @@ html {
   font-family: 'Montserrat', sans-serif; }
 
 body {
-  font-size: 17px;
+  font-size: 1em;
   scroll-behavior: smooth; }
 
 .content {
@@ -32,7 +33,6 @@ body {
   body {
     font-size: 0.8rem; } }
 
-/*Utilities*/
 /*Components*/
 /*----------Background-Colors------*/
 .darkBlue {
@@ -161,6 +161,7 @@ body {
     margin: 5px;
     transition: all 0.3s ease; }
   .head__nav .head__nav--logo {
+    font-size: 1.6em;
     letter-spacing: 5px; }
   .head__nav .head__nav--content {
     display: flex;
