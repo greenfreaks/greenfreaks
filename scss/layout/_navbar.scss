@@ -1,5 +1,6 @@
 /*------Nav-------*/
 .head__nav {
+    background-color: $black;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -7,7 +8,7 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    padding: 15px 0;
+    padding: 8px 0;
 
     /*--- Burger Nav---*/
     .head__nav--burger {
@@ -22,7 +23,7 @@
 
     .head__nav--logo {
         font-size: $generalFontSize * 0.8;
-        letter-spacing: 5px;
+        letter-spacing: 8px;
     }
 
     .head__nav--content {
@@ -37,7 +38,7 @@
             &:hover {
                 transform: translateY(-50px);
                 transition: all 0.5s;
-                background-color: $black;
+                color: $green;
                 padding: 15px;
             }
         }

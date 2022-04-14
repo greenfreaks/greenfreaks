@@ -4,22 +4,25 @@
 }
 
 html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Prompt', sans-serif !important;
 }
 
 body {
+    max-width: 100%;
     font-size: $generalFontSize / 2;
     scroll-behavior: smooth;
+    // background-color: $extraLightGrey;
+    overflow-x: hidden;
 }
 
-.content {
+.bodyContent {
     margin: 30px;
 }
 
 @media screen and (max-width: 768px) {
     body {
         font-size: 0.9em;
-        /* overflow-x: hidden; */
+        scroll-behavior: smooth;
     }
 
 

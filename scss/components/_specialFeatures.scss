@@ -20,3 +20,12 @@
 .noDecoration{
     text-decoration: none;
 }
+
+.roundedImg{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}

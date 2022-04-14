@@ -1,50 +1,36 @@
 /*-------------------------------------Home -desktop -------------------------------*/
 /* ---------- Header Banner -------- */
 .head__banner {
-    background-image: url("../img/home/header.jpg");
-    width: 100%;
-    height: 400px;
-
-    .head__banner--content {
-        color: $white;
-        width: 40%;
-        padding-top: 100px;
-        padding-left: 50px;
-
-        &:hover {
-            transform: translateX(100px);
-            transition: all 2s;
-        }
-
-        a {
-            float: right;
-        }
-    }
-}
-
-/* ---------- Qué es  -------- */
-
-article {
+    background-image: url("../assets/img/home/banner_index-min.jpg");
+    padding: 50px;
+    max-width: 100%;
+    height: 450px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, auto);
-    grid-template-areas: "article__img       article__content";
+    grid-template-areas: "head__banner_logo     head__banner_text";
 
-    .article__img {
-        grid-area: article__img;
+    .head__banner--logo {
+        padding-top: 90px;
+        grid-area: head__banner_logo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $white;
 
-        img {
-            width: 100%;
+        h2 {
+            letter-spacing: 9px;
         }
     }
 
-    .article__content {
-        grid-area: article__content;
-        padding-top: 30px;
+    .head__banner--text {
+        // font-family: 'Source Code Pro', monospace;
+        grid-area: head__banner_text;
+        padding-top: 90px;
+        line-height: 40px;
     }
 }
-
 
 /* ---------- Servicios -------- */
 .servicios {
@@ -52,18 +38,18 @@ article {
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, auto);
-    grid-template-areas: "servicios__web       servicios__multimedia        servicios__accesorios";
+    grid-template-areas: "servicios__web       servicios__aplicaciones        servicios__multimedia";
 
     .servicios__web {
         grid-area: servicios__web;
     }
 
-    .servicios__multimedia {
-        grid-area: servicios__multimedia;
+    .servicios__aplicaciones {
+        grid-area: servicios__aplicaciones;
     }
 
-    .servicios__accesorios {
-        grid-area: servicios__accesorios;
+    .servicios__multimedia {
+        grid-area: servicios__multimedia;
     }
 
     img {
@@ -71,112 +57,93 @@ article {
     }
 }
 
+/*----Home - Large -------*/
 
+@media screen and(max-width: 992px) {
+    .head__banner {
+        height: 300px;
 
-/*--------Testimonios---------*/
-.testimonios {
-    padding: 20px 200px 10px;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas: "testimonios__img      testimonios__content"
-        "testimonios__nav      testimonios__nav";
-
-    .testimonios__img {
-        grid-area: testimonios__img;
-
-        .testimonios__img--pic {
-            width: 250px;
-            height: 250px;
-            border-radius: 150px;
+        .head__banner--logo {
+            padding-top: 30px;
         }
 
-        .testimonios__img--flag {
-            display: none;
-        }
-    }
-
-    .testimonios__content {
-        padding-top: 50px;
-        grid-area: testimonios__content;
-    }
-
-    .testimonios__nav {
-        grid-area: testimonios__nav;
-
-        ul {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            font-size: 5em;
+        .head__banner--text {
+            padding-top: 30px;
+            line-height: 30px;
         }
     }
 }
 
-/*------ Home - Tablet-------*/
+/*------ Home - Medium-------*/
 @media screen and (max-width: 768px) {
+    .head {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: "head__nav"
+            "head__banner";
 
-    .head__banner--content {
-        width: 60%;
+        .head__nav {
+            grid-area: head__nav;
+        }
 
-        a {
-            float: left;
+        .head__banner {
+            grid-area: head__banner;
         }
     }
 
-    .article__content {
-        grid-area: article__content;
-        padding-top: 0;
-    }
+    .servicios {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "servicios__web"
+            "servicios__aplicaciones"
+            "servicios__multimedia";
 
-    .testimonios {
-        padding: 20px;
+        .servicios__web--content {
+            text-align: center;
 
-        .testimonios__img {
-            img {
-                width: 250px;
-                height: 250px;
+            .servicios__web--content--link {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        .servicios__aplicaciones--content {
+            margin-top: 30px;
+            text-align: center;
+
+            .servicios__aplicaciones--content--link {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        .servicios__multimedia--content {
+            margin-top: 30px;
+            text-align: center;
+
+            .servicios__multimedia--content--link {
+                display: flex;
+                justify-content: space-around;
             }
         }
     }
 }
 
 /*------Home - Long Cell ----------*/
-@media screen and (max-width: 480px) {
-    .head__banner--content {
-        width: 80%;
-
-        a {
-            float: left;
-        }
-    }
-
-    article {
+@media screen and (max-width: 576px) {
+    .head__banner{
+        padding-top: 30px;
+        height: 400px;
         grid-template-columns: 1fr;
-        grid-template-areas: "article__content"
-            "article__img";
-    }
+        grid-template-areas: 
+        "head__banner_text"     
+        "head__banner_logo";
 
-    .servicios {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "servicios__web        servicios__multimedia"
-            "servicios__accesorios servicios__accesorios";
-    }
-
-    .testimonios {
-        grid-template-columns: 1fr;
-        grid-template-areas: "testimonios__img"
-            "testimonios__content"
-            "testimonios__nav";
-
-        .testimonios__img {
-            img {
-                margin-left: 90px;
-                width: 150px;
-                height: 150px;
-            }
+        .head__banner--text {
+            padding-top: 10px;
+            line-height: 30px;
         }
     }
 }

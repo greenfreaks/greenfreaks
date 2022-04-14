@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greenfreaks/Green-Freaks.git"
+    "url": "git+https://github.com/greenfreaks/greenfreaks.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/greenfreaks/Green-Freaks/issues"
+    "url": "https://github.com/greenfreaks/greenfreaks/issues"
   },
-  "homepage": "https://github.com/greenfreaks/Green-Freaks#readme",
+  "homepage": "https://github.com/greenfreaks/greenfreaks#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
