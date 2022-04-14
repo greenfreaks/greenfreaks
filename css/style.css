@@ -280,9 +280,9 @@ body {
     position: absolute;
     right: 0;
     height: 92vh;
-    top: 8vh;
+    top: 11vh;
     flex-direction: column;
-    background-color: #1A3544;
+    background-color: #141212;
     align-items: center;
     width: 100%;
     transform: translateX(100%);
@@ -364,6 +364,29 @@ footer {
     padding-right: 20px;
     padding-left: 20px; } }
 
+@media screen and (max-width: 480px) {
+  footer .footer__logo {
+    padding: 120px 30px 0; }
+  footer .footer__credits {
+    padding: 10px; }
+    footer .footer__credits ul {
+      flex-direction: column;
+      align-items: center; } }
+
+@media screen and (max-width: 320px) {
+  footer .footer__logo {
+    text-align: center;
+    font-size: 1em;
+    padding: 100px 50px 0; }
+  footer .footer__social {
+    padding-right: 0px;
+    padding-left: 0px; }
+  footer .footer__credits {
+    padding: 10px; }
+    footer .footer__credits ul {
+      display: block;
+      text-align: center; } }
+
 /*Views*/
 /*-------------------------------------Home -desktop -------------------------------*/
 /* ---------- Header Banner -------- */
@@ -395,15 +418,13 @@ footer {
 .servicios {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, auto);
-  grid-template-areas: "servicios__web       servicios__aplicaciones        servicios__multimedia"; }
+  grid-template-areas: "servicios__web       servicios__aplicaciones"; }
   .servicios .servicios__web {
     grid-area: servicios__web; }
   .servicios .servicios__aplicaciones {
     grid-area: servicios__aplicaciones; }
-  .servicios .servicios__multimedia {
-    grid-area: servicios__multimedia; }
   .servicios img {
     width: 100%; }
 
@@ -431,7 +452,7 @@ footer {
       grid-area: head__banner; }
   .servicios {
     grid-template-columns: 1fr;
-    grid-template-areas: "servicios__web" "servicios__aplicaciones" "servicios__multimedia"; }
+    grid-template-areas: "servicios__web" "servicios__aplicaciones"; }
     .servicios .servicios__web--content {
       text-align: center; }
       .servicios .servicios__web--content .servicios__web--content--link {
@@ -456,20 +477,20 @@ footer {
     padding-top: 30px;
     height: 400px;
     grid-template-columns: 1fr;
-    grid-template-areas: "head__banner_text"      "head__banner_logo"; }
+    grid-template-areas: "head__banner_text" "head__banner_logo"; }
     .head__banner .head__banner--text {
       padding-top: 10px;
       line-height: 30px; } }
 
 /*------ Home - Tall Cell-------*/
 @media screen and (max-width: 320px) {
-  .head__banner--content h1 {
-    font-size: 1rem; }
-  article {
-    grid-template-areas: "article__img" "article__content"; }
+  .head__banner {
+    height: 600px;
+    display: flex;
+    flex-direction: column-reverse; }
   .servicios {
     grid-template-columns: 1fr;
-    grid-template-areas: "servicios__web" "servicios__multimedia" "servicios__accesorios"; }
+    grid-template-areas: "servicios__web" "servicios__aplicaciones"; }
   .testimonios__img img {
     margin-left: 30px; } }
 

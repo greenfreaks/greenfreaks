@@ -36,9 +36,9 @@
 .servicios {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, auto);
-    grid-template-areas: "servicios__web       servicios__aplicaciones        servicios__multimedia";
+    grid-template-areas: "servicios__web       servicios__aplicaciones";
 
     .servicios__web {
         grid-area: servicios__web;
@@ -46,10 +46,6 @@
 
     .servicios__aplicaciones {
         grid-area: servicios__aplicaciones;
-    }
-
-    .servicios__multimedia {
-        grid-area: servicios__multimedia;
     }
 
     img {
@@ -81,7 +77,8 @@
         grid-gap: 10px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(1, auto);
-        grid-template-areas: "head__nav"
+        grid-template-areas:
+            "head__nav"
             "head__banner";
 
         .head__nav {
@@ -97,8 +94,7 @@
         grid-template-columns: 1fr;
         grid-template-areas:
             "servicios__web"
-            "servicios__aplicaciones"
-            "servicios__multimedia";
+            "servicios__aplicaciones";
 
         .servicios__web--content {
             text-align: center;
@@ -133,13 +129,13 @@
 
 /*------Home - Long Cell ----------*/
 @media screen and (max-width: 576px) {
-    .head__banner{
+    .head__banner {
         padding-top: 30px;
         height: 400px;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "head__banner_text"     
-        "head__banner_logo";
+        grid-template-areas:
+            "head__banner_text"
+            "head__banner_logo";
 
         .head__banner--text {
             padding-top: 10px;
@@ -151,23 +147,18 @@
 /*------ Home - Tall Cell-------*/
 @media screen and (max-width: 320px) {
 
-
-    .head__banner--content {
-        h1 {
-            font-size: 1rem;
-        }
+    .head__banner {
+        height: 600px;
+        display: flex;
+        flex-direction:column-reverse;
     }
 
-    article {
-        grid-template-areas: "article__img"
-            "article__content";
-    }
 
     .servicios {
         grid-template-columns: 1fr;
-        grid-template-areas: "servicios__web"
-            "servicios__multimedia"
-            "servicios__accesorios";
+        grid-template-areas:
+            "servicios__web"
+            "servicios__aplicaciones";
     }
 
     .testimonios__img {
