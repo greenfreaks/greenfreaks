@@ -1,5 +1,5 @@
 /*------Nav-------*/
-.head__nav {
+.header__nav {
     background-color: $black;
     display: flex;
     justify-content: space-around;
@@ -11,7 +11,7 @@
     padding: 8px 0;
 
     /*--- Burger Nav---*/
-    .head__nav--burger {
+    .header__nav--burger {
         div {
             width: 20px;
             height: 2px;
@@ -21,12 +21,12 @@
         }
     }
 
-    .head__nav--logo {
+    .header__nav--logo {
         font-size: $generalFontSize * 0.8;
         letter-spacing: 8px;
     }
 
-    .head__nav--content {
+    .header__nav--content {
         display: flex;
         justify-content: space-around;
         width: 60%;
@@ -57,7 +57,7 @@
 
 
 /*---Responsive NAV --*/
-.head__nav--burger {
+.header__nav--burger {
     display: none;
     font-size: 1.2em;
 }
@@ -65,7 +65,7 @@
 @media screen and (max-width: 768px) {
 
     /*------ NAVBAR -------*/
-    .head__nav--content {
+    .header__nav--content {
         position: absolute;
         right: 0;
         height: 92vh;
@@ -82,16 +82,16 @@
         }
     }
 
-    .head__nav--burger {
+    .header__nav--burger {
         display: block;
         cursor: pointer;
     }
 
-    .head__nav--contentActive {
+    .header__nav--contentActive {
         transform: translate(0%);
     }
 
-    @keyframes head__nav--contentFade {
+    @keyframes header__nav--contentFade {
         from {
             opacity: 0;
             transform: translateX(50px);
@@ -103,15 +103,15 @@
         }
     }
 
-    .toggle .head__nav--burger-1 {
+    .toggle .header__nav--burger-1 {
         transform: rotate(-45deg) translate(-3px, 5px);
     }
 
-    .toggle .head__nav--burger-2 {
+    .toggle .header__nav--burger-2 {
         opacity: 0;
     }
 
-    .toggle .head__nav--burger-3 {
+    .toggle .header__nav--burger-3 {
         transform: rotate(45deg) translate(-5px, -7px);
     }
 }
