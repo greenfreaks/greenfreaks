@@ -9,6 +9,10 @@
             font-size: $generalFontSize / 1.5;
             cursor:pointer;
         }
+        .active{
+            border-bottom: solid $darkBlue 5px;
+            padding-bottom: 8px;
+        }
     }
 }
 /*End Media Screen 480px*/

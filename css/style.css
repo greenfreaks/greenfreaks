@@ -547,6 +547,9 @@ footer {
   .navServices ul li {
     font-size: 1.33333em;
     cursor: pointer; }
+  .navServices ul .active {
+    border-bottom: solid #1A3544 5px;
+    padding-bottom: 8px; }
 
 /*End Media Screen 480px*/
 /*------------------------------------------ Productos -Desktop -------------------------------------*/
