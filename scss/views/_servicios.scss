@@ -1,98 +1,14 @@
 /*------------------------------------------ Servicios -Desktop -------------------------------------*/
-.servicios__nav {
-    ul {
+.navServices{
+    ul{
+        list-style: none;
         display: flex;
         justify-content: space-around;
-
-        li {
-            a {
-                text-decoration: none;
-                color: var(--darkGray);
-
-                .active {
-                    border-bottom: solid 5px #6BDE3D;
-                }
-            }
+        margin-bottom: 30px;
+        li{
+            font-size: $generalFontSize / 1.5;
+            cursor:pointer;
         }
     }
 }
-
-.servicios__slide {
-    min-width: 100%;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas:
-        "servicios__slide--img        servicios__slide--content"
-        "servicios__slide--nav        servicios__slide--nav";
-
-    .servicios__slide--img {
-        grid-area: servicios__slide--img;
-    }
-
-    .servicios__slide--content {
-        padding: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        align-content: center;
-        grid-area: servicios__slide--content;
-    }
-
-    .servicios__slide--nav {
-        grid-area: servicios__slide--nav;
-
-        ul {
-            font-size: 6rem;
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        /*End Servicios -Desktop*/
-    }
-}
-
-/*--------Servicios - Tablet --------*/
-@media screen and (max-width: 768px) {
-
-
-    .servicios__slide {
-        grid-template-columns: 300px 478px;
-        grid-gap: 20px
-    }
-
-    .servicios__slide--img img {
-        width: 300px;
-    }
-
-    .servicios__slide--content {
-        align-items: center;
-        padding: 10px;
-    }
-}
-
-/*--------Servicios - Log Cell --------*/
-@media screen and (max-width: 480px) {
-
-    .servicios__slide {
-        padding: 0px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "servicios__slide--img"
-            "servicios__slide--content"
-            "servicios__slide--nav";
-
-        .servicios__slide--img {
-            img {
-                width: 100%;
-            }
-        }
-    }
-    .servicios__nav ul {
-        flex-wrap: wrap;
-    }
-
-}
-
 /*End Media Screen 480px*/
