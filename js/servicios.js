@@ -1,5 +1,9 @@
-    let showWeb = document.querySelector('.showWeb');
-    showWeb.classList.add('active');
+    // alert('Funciona');
+
+    //Seleccionamos 
+    let navWeb = document.querySelector('.navWeb');
+    navWeb.classList.add('active');
+
     let showAplicaciones = document.querySelector('.showAplicaciones');
 
     let sliderWeb = document.querySelector('.slider__web');

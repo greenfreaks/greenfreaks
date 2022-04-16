@@ -40,14 +40,20 @@ body {
 
 /*Components*/
 /*----------Background-Colors------*/
+.extraDarkBlue {
+  background-color: #01080e; }
+
 .darkBlue {
   background-color: #1A3544; }
 
 .black {
   background-color: #000; }
 
+.lightBlack {
+  background-color: #141212; }
+
 .green {
-  background-color: #6BDE3D; }
+  background-color: #50b827; }
 
 .darkGray {
   background-color: #47525E; }
@@ -55,12 +61,15 @@ body {
 .lightGray {
   background-color: #8190A5; }
 
+.almostWhite {
+  background-color: #FAFAFA; }
+
 /*----------Text colors------------*/
 .darkBlueTx {
   color: #1A3544; }
 
 .greenTx {
-  color: #6BDE3D; }
+  color: #50b827; }
 
 .darkGrayTx {
   color: #47525E; }
@@ -71,7 +80,7 @@ body {
 .whiteTx {
   color: #fff; }
 
-.backTx {
+.blackTx {
   color: #000; }
 
 /*----------Text effects------------*/
@@ -310,10 +319,10 @@ body {
       .header__nav .header__nav--content a:hover {
         transform: translateY(-50px);
         transition: all 0.5s;
-        color: #6BDE3D;
+        color: #50b827;
         padding: 15px; }
     .header__nav .header__nav--content .active {
-      border-bottom: #6BDE3D 5px solid;
+      border-bottom: #50b827 5px solid;
       padding: 5px; }
     .header__nav .header__nav--content ul {
       display: flex;
@@ -370,7 +379,7 @@ footer {
     footer .footer__logo h2 {
       letter-spacing: 20px;
       font-size: 2.2em;
-      color: #6BDE3D; }
+      color: #50b827; }
   footer .footer__social {
     padding: 0 50px 200px;
     width: 30%; }
@@ -397,7 +406,7 @@ footer {
           font-size: 0.66667em; }
         footer .footer__credits ul li a {
           text-decoration: none;
-          color: #6BDE3D; }
+          color: #50b827; }
 
 @media screen and (max-width: 768px) {
   footer .footer__logo {
@@ -551,6 +560,17 @@ footer {
     border-bottom: solid #1A3544 5px;
     padding-bottom: 8px; }
 
+@media screen and (max-width: 576px) {
+  .navServices ul {
+    text-align: center; }
+    .navServices ul li {
+      padding: 20px; } }
+
+@media screen and (max-width: 380px) {
+  .navServices ul {
+    flex-direction: column;
+    align-items: center; } }
+
 /*End Media Screen 480px*/
 /*------------------------------------------ Productos -Desktop -------------------------------------*/
 .bannerProductos {
@@ -633,3 +653,72 @@ footer {
       float: left; } }
 
 /*End Media Screen 480px*/
+.contacForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: "contacForm__message        contacForm__form"; }
+  .contacForm .contacForm__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: contacForm__message;
+    background-image: url("../assets/img/contacto/contact_img_black-min.jpg");
+    padding: 50px 100px;
+    text-align: left; }
+    .contacForm .contacForm__message b {
+      letter-spacing: 5px; }
+    .contacForm .contacForm__message .comillas {
+      font-size: 2em; }
+    .contacForm .contacForm__message img {
+      margin-top: 50px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover; }
+  .contacForm .contacForm__form {
+    grid-area: contacForm__form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .contacForm .contacForm__form input {
+      width: 50%;
+      height: 25px;
+      border-radius: 4px;
+      font-size: 1.11111em;
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 5px; }
+    .contacForm .contacForm__form textarea {
+      max-width: 50%;
+      min-width: 50%;
+      width: 50%;
+      height: 100px;
+      max-height: 100px;
+      min-height: 100px;
+      border-radius: 4px;
+      font-size: 1.53846em;
+      padding: 20px; }
+
+@media screen and (max-width: 768px) {
+  .contacForm {
+    grid-template-columns: 1fr;
+    grid-template-areas: "contacForm__message" "contacForm__form"; } }
+
+@media screen and (max-width: 380px) {
+  .contacForm .contacForm__message {
+    padding: 35px; }
+  .contacForm .contacForm__form {
+    padding: 5px; }
+    .contacForm .contacForm__form input {
+      width: 70%; }
+    .contacForm .contacForm__form textarea {
+      max-width: 70%;
+      min-width: 70%;
+      width: 70%; } }
+
+@media screen and (max-width: 320px) {
+  .contacForm .contacForm__message {
+    padding: 25px; } }

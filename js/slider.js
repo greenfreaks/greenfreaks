@@ -1,7 +1,7 @@
 (function () {
     const sliders = [...document.querySelectorAll('.slider__body')];
-    const arrowNext = document.querySelector('#next');
-    const arrowBefore = document.querySelector('#before');
+    const arrowNext = document.querySelector('.nextSlide');
+    const arrowBefore = document.querySelector('.beforeSlide');
     let value;
 
     arrowNext.addEventListener('click', () => changePosition(1));

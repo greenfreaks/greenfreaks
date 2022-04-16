@@ -1,10 +1,16 @@
 /*----------Background-Colors------*/
+.extraDarkBlue{
+    background-color: $extraDarkBlue;
+}
 .darkBlue{
     background-color: $darkBlue;
 }
 
 .black{
     background-color: $black;
+}
+.lightBlack{
+    background-color: $lightBlack;
 }
 
 .green{
@@ -16,4 +22,7 @@
 }
 .lightGray{
     background-color: $lightGray;
+}
+.almostWhite{
+    background-color: $almostWhite;
 }
